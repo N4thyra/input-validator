@@ -10,37 +10,40 @@
 </head>
 <body>
 
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%; width: 100%;">
 
-<div class="group">
-	<input class="group__input"
-				 type="text"
-				 data-validate="email"
-				 data-validate-msg="Incorrect format of your e-mail address">
-	<label class="group__label">E-mail</label>
-	<div class="group__strip"></div>
-	<div class="group__err-msg"></div>
-</div>
+	<div class="group">
+		<input class="group__input"
+					 type="text"
+					 data-validate="email"
+					 data-validate-msg="Incorrect format of your e-mail address">
+		<label class="group__label">E-mail</label>
+		<div class="group__strip"></div>
+		<div class="group__err-msg"></div>
+	</div>
 
-<div class="group">
-	<input class="group__input"
-				 type="text"
-				 data-validate="text"
-				 data-validate-min="4"
-				 data-validate-msg="Your input must be at least {min} chars long">
-	<label class="group__label">Name</label>
-	<div class="group__strip"></div>
-	<div class="group__err-msg"></div>
-</div>
+	<div class="group">
+		<input class="group__input"
+					 type="text"
+					 data-validate="text"
+					 data-validate-max="4"
+					 data-validate-msg="Your input must be {max} chars long">
+		<label class="group__label">Name</label>
+		<div class="group__strip"></div>
+		<div class="group__err-msg"></div>
+	</div>
 
-<div class="group">
-	<input class="group__input"
-				 type="text"
-				 data-validate="password"
-				 data-validate-min="5"
-				 data-validate-msg="Your input must be at least {min} chars long">
-	<label class="group__label">Password</label>
-	<div class="group__strip"></div>
-	<div class="group__err-msg"></div>
+	<div class="group">
+		<input class="group__input"
+					 type="text"
+					 data-validate="password"
+					 data-validate-min="5"
+					 data-validate-msg="Your input must be at least {min} chars long">
+		<label class="group__label">Password</label>
+		<div class="group__strip"></div>
+		<div class="group__err-msg"></div>
+	</div>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

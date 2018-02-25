@@ -37,6 +37,8 @@ body {
 	font-size: 14px;
 	color: var(--group-text--primary);
 	transition: all 0.3s ease-in-out;
+	user-select: none;
+	pointer-events: none;
 }
 
 .group__strip {

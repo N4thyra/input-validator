@@ -8,6 +8,8 @@ $(document).ready(function () {
 
 		$('input[data-validate]').each(function () {
 
+			console.log($(this).data('validate-msg'));
+
 			setFloatingLabel($(this));
 
 			switch ($(this).data('validate')) {
@@ -87,12 +89,8 @@ $(document).ready(function () {
 				}
 
 				if (msg.indexOf('{min}') > -1) {
-					var pattern = /(.*){min}(.*)/;
-					msg = pattern.exec(msg);
-
 					if (minVal) {
-						msg = msg[1] + ' ' + self.data('validate-min') + ' ' + msg[2];
-
+						msg = msg.replace('{min}', minVal);
 					} else {
 						msg = 'Attribute data-validate-min NOT SET!';
 						self.siblings('.group__err-msg').text(msg);
@@ -102,12 +100,8 @@ $(document).ready(function () {
 				}
 
 				if (msg.indexOf('{max}') > -1) {
-					var pattern = /(.*){max}(.*)/;
-					msg = pattern.exec(msg);
-
 					if (maxVal) {
-						msg = msg[1] + ' ' + self.data('validate-max') + ' ' + msg[2];
-
+						msg = msg.replace('{max}', maxVal);
 					} else {
 						msg = 'Attribute data-validate-max NOT SET!';
 						self.siblings('.group__err-msg').text(msg);
@@ -117,7 +111,6 @@ $(document).ready(function () {
 				}
 			});
 		}
-
 	}
 
 	inputValidator();

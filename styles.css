@@ -20,7 +20,8 @@ body {
 .group {
 	position: relative;
 	width: 200px;
-	padding-top: 12px;
+	height: 40px;
+	margin-top: 10px;
 }
 
 .group__input {
@@ -114,5 +115,6 @@ body {
 .group__err-msg {
 	font-size: 12px;
 	color: var(--group-text--err);
+	user-select: none;
 }
 
